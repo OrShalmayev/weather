@@ -16,12 +16,12 @@ export const apiHelpers = {
         return this.keys[this.currentKeyIndex];
     },
     autoComplete: function(search = '') {
-        return `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${this.key()}&q=${search}&language=en`;
+        return `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${this.key()}&q=${search}&language=en`;
     },
     getCurrentWeather: function(locationKey = '') {
-        return `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${this.key()}&language=en-US`;
+        return `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${this.key()}&language=en-US`;
     },
     fiveDayDailyForecast: function (locationKey = '', details = false, metric = false) {
-        return `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${this.key()}&language=en-US&details=${details}&metric=${metric}`;
+        return `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${this.key()}&language=en-US&details=${details}&metric=${metric}`;
     }
 }
